@@ -10,13 +10,4 @@ schema_view = get_schema_view(
     ),
     public=True,
     permission_classes=(permissions.AllowAny,),
-    authentication_classes=[],
-    security_definitions={  # ✨ 이 부분 추가!
-        'Bearer': {
-            'type': 'apiKey',
-            'in': 'header',
-            'name': 'Authorization',
-            'description': 'JWT 인증: Bearer {your_token} 형식으로 입력'
-        }
-    }
 )
